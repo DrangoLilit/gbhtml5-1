@@ -128,10 +128,7 @@ li {
     align-items: center;
 }
 
-.block_filter-bkg {
-
-
-}
+.block_filter-bkg {}
 
 .padding-bg {
     padding: 0 96px;
@@ -149,21 +146,18 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        background-color: #424242;
+    background-color: #424242;
 }
 
-.footer-bottom-bkg {
+.footer-bottom-bkg {}
 
-}
-
-.footer-ecommerce-bkg {
-
-}
+.footer-ecommerce-bkg {}
 
 .footer-ecommerce-p {
     font-size: 16px;
     font-weight: 600;
     padding-left: 20px;
+
 }
 
 .footer-twitter {
@@ -187,6 +181,7 @@ li {
 .footer-bottom__right-p {
     font-size: 18px;
     font-weight: 600;
+            margin-top: 16px;
 }
 
 .footer {
@@ -243,33 +238,33 @@ li {
 }
 
 .block_about-legend {
-color: #837659;
-font-size: 20px;
-font-weight: 600;
-text-transform: uppercase;
+    color: #837659;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
     text-align: center;
     padding: 0 12px
 }
 
 .block_about-p {
-color: #424242;
-font-size: 16px;
-font-weight: 600;
-line-height: 24px;
+    color: #424242;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
     padding-top: 70px;
     width: 469px;
     margin: 0 auto;
     text-align: center;
     letter-spacing: 1px;
-    
+
 }
 
 .section-block_filter {
-      background-color: #f5f6f7;  
+    background-color: #f5f6f7;
 }
 
 .header {
-        height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -277,16 +272,16 @@ line-height: 24px;
 }
 
 .header-pic {
-        background: url(img/Livello_1.jpg) no-repeat center;
+    background: url(img/Livello_1.jpg) no-repeat center;
     background-size: cover;
 }
 
 .section-block_about {
-        background-color: #aa9b77;
+    background-color: #aa9b77;
 }
 
 .footer-fst {
-        background-color: #535253;
+    background-color: #535253;
 }
 
 .footer-last {
