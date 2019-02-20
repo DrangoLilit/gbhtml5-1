@@ -34,15 +34,7 @@ li {
 }
 
 
-.header {
-    background: url(img/Livello_1.jpg) no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .header__text {
     width: 800px;
@@ -85,6 +77,8 @@ li {
 .header-arrow {
     color: #ffffff;
     font-size: 27px;
+    cursor: pointer;
+    margin-bottom: 41px;
 }
 
 .header__menu-ul {
@@ -96,7 +90,7 @@ li {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    line-height: 18px;
+    padding-right: 35px;
 }
 
 .block_filter-input {
@@ -112,13 +106,15 @@ li {
     /* Style for "Rettangolo" */
     width: 204px;
     height: 52px;
-    border: none;
+    display: block;
     border-radius: 3px;
     background-color: #aa9b77;
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
+    line-height: 52px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -126,7 +122,6 @@ li {
 }
 
 .block_filter {
-
     height: 143px;
     display: flex;
     justify-content: space-between;
@@ -134,7 +129,7 @@ li {
 }
 
 .block_filter-bkg {
-    background-color: #f5f6f7;
+
 
 }
 
@@ -146,6 +141,7 @@ li {
     height: 72px;
     display: flex;
     align-items: center;
+
 }
 
 .footer-bottom {
@@ -153,14 +149,15 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+        background-color: #424242;
 }
 
 .footer-bottom-bkg {
-    background-color: #424242;
+
 }
 
 .footer-ecommerce-bkg {
-    background-color: #535253;
+
 }
 
 .footer-ecommerce-p {
@@ -230,4 +227,68 @@ li {
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.block_about {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_about-text {
+    width: 711px;
+    height: 250px;
+    border: 2px solid #918363;
+}
+
+.block_about-legend {
+color: #837659;
+font-size: 20px;
+font-weight: 600;
+text-transform: uppercase;
+    text-align: center;
+    padding: 0 12px
+}
+
+.block_about-p {
+color: #424242;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+    padding-top: 70px;
+    width: 469px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+
+.section-block_filter {
+      background-color: #f5f6f7;  
+}
+
+.header {
+        height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-pic {
+        background: url(img/Livello_1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.section-block_about {
+        background-color: #aa9b77;
+}
+
+.footer-fst {
+        background-color: #535253;
+}
+
+.footer-last {
+    background-color: #424242;
 }
