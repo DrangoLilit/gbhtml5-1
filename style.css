@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+color: #ffffff;
+font-size: 60px;
+font-weight: 400;
+    
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+.header {
+        background: url(img/Livello_1.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__text {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header__text-p {
+    padding: 0 106px;
+color: #ffffff;
+font-size: 20px;
+font-weight: 400;
+        letter-spacing: 1px;
+}
+
+.header__menu-li {
+color: #ffffff;
+font-size: 18px;
+font-weight: 400;
+    padding: 14px 27px;
+}
+.header__menu-li:hover{
+    color: #ccc;
+}
+
+.padding-sm {
+    padding: 0 64px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+        width: 100%;
+}
+
+.header-arrow {
+    color: #ffffff;
+        font-size: 27px;
+}
+
+.header__menu-ul {
+    display: flex;
+}
