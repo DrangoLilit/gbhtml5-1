@@ -85,3 +85,53 @@ font-weight: 400;
 .header__menu-ul {
     display: flex;
 }
+
+.block_filter-label {
+color: #333333;
+font-size: 18px;
+font-weight: 400;
+text-transform: uppercase;
+    line-height: 18px;
+}
+
+.block_filter-input {
+    /* Style for "Rettangolo" */
+width: 25px;
+height: 24px;
+border-radius: 3px;
+border: 2px solid #aa9b77;
+        margin-right: 18px;
+}
+
+.btn {
+    /* Style for "Rettangolo" */
+width: 204px;
+height: 52px;
+    border: none;
+border-radius: 3px;
+background-color: #aa9b77;
+color: #ffffff;
+font-size: 14px;
+font-weight: 400;
+text-transform: uppercase;
+}
+.btn:hover{
+background: #918363;
+}
+
+.block_filter {
+
+    height: 143px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block_filter-bkg {
+    background-color: #f5f6f7;
+
+}
+
+.padding-bg {
+    padding: 0 96px;
+}
