@@ -154,6 +154,150 @@ li {
     background: #918363;
 }
 
+/* Блок товаров */
+.products {
+    padding-top: 87px;
+    padding-bottom: 131px;
+
+    &-cat {
+        overflow: hidden;
+
+        &-h4 {
+            color: @medium-dark-color;
+            overflow: hidden;
+        }
+
+        &-title {
+            overflow: hidden;
+        }
+
+        &-h4 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &-title:before,
+        &-title:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        &-title:before {
+            margin-left: -100%;
+            left: -52px;
+        }
+
+        &-title:after {
+            margin-right: -100%;
+            right: -52px;
+        }
+    }
+
+    &-list {
+        margin-top: 50px;
+
+        &__pagination {
+            width: 30px;
+            text-align: center;
+            color: @khaki;
+            font-size: 16px;
+            font-weight: 600;
+
+            &-arrow {
+                padding-top: 4px;
+            }
+        }
+
+        &-products {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 21px;
+            padding-bottom: 93px;
+            clear: both;
+        }
+
+        &-product {
+            width: 320px;
+            height: 378px;
+            background-color: #f5f6f7;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-top,
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-price {
+                color: @medium-dark-color;
+                font-size: 22px;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            &-price:after {
+                content: "\20AC"
+            }
+
+            &-color {
+                display: flex;
+            }
+
+            &-size {
+                color: @medium-dark-color;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            &-name {
+                color: @khaki;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            &-top,
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.size-arrow-down {
+    padding-left: 5px;
+}
+
+.color-circle {
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    margin: 0 2px;
+}
+
+.cat-women {
+    text-align: right;
+}
+
+.cat-women-pagination {
+    float: right;
+}
+
+/* /Блок товаров */
 
 .block_about {
     height: 400px;
@@ -191,6 +335,7 @@ li {
 
 }
 
+/* Блок подвала */
 .footer {
     color: @white;
 
@@ -236,11 +381,12 @@ li {
     }
 
     &-bottom {
-            height: 352px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #424242;
+        height: 352px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #424242;
+
         &-left {
             width: 306px;
         }
@@ -284,6 +430,7 @@ li {
 
 }
 
+/* /Блок подвала */
 .section-block_filter {
     background-color: #f5f6f7;
 }
