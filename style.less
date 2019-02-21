@@ -1,0 +1,293 @@
+/* color */
+@white: #ffffff;
+@dark-color: #333333;
+@medium-dark-color: #424242;
+@khaki: #aa9b77;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    color: @white;
+    font-size: 60px;
+    font-weight: 400;
+
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.padding-sm {
+    padding: 0 64px;
+}
+
+.padding-bg {
+    padding: 0 96px;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-pic {
+        background: url(img/Livello_1.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    &__text {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+
+
+        &-p {
+            padding: 0 106px;
+            color: @white;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        width: 100%;
+
+        &-li {
+            color: @white;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 14px 27px;
+        }
+
+
+        &-li:hover {
+            color: #ccc;
+        }
+
+        &-ul {
+            display: flex;
+        }
+    }
+
+    &-arrow {
+        color: @white;
+        font-size: 27px;
+        cursor: pointer;
+        margin-bottom: 41px;
+    }
+}
+
+.block_filter {
+    height: 143px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-label {
+        color: @dark-color;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-right: 35px;
+    }
+
+    &-input {
+        /* Style for "Rettangolo" */
+        width: 25px;
+        height: 24px;
+        border-radius: 3px;
+        border: 2px solid @khaki;
+        margin-right: 18px;
+    }
+}
+
+.btn {
+    /* Style for "Rettangolo" */
+    width: 204px;
+    height: 52px;
+    display: block;
+    border-radius: 3px;
+    background-color: @khaki;
+    color: @white;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 52px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #918363;
+}
+
+
+.block_about {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .block_about-text {
+        width: 711px;
+        height: 250px;
+        border: 2px solid #918363;
+    }
+
+    .block_about-legend {
+        color: #837659;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 12px
+    }
+
+    .block_about-p {
+        color: @medium-dark-color;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        padding-top: 70px;
+        width: 469px;
+        margin: 0 auto;
+        text-align: center;
+        letter-spacing: 1px;
+
+    }
+
+}
+
+.footer {
+    color: @white;
+
+    &-fst {
+        background-color: #535253;
+    }
+
+    &-last {
+        background-color: @medium-dark-color;
+    }
+
+    &-nav {
+        &-li {
+            color: @white;
+        }
+
+        &-li:after {
+            content: "|";
+            color: @khaki;
+            padding: 0 5px;
+        }
+
+        &-li:last-child:after {
+            content: "";
+            padding: 0;
+        }
+
+        &-a {
+            color: @white;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+
+        &-a:hover {
+            color: #535253;
+        }
+
+        &-ul {
+            display: flex;
+        }
+    }
+
+    &-bottom {
+            height: 352px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #424242;
+        &-left {
+            width: 306px;
+        }
+
+        &__left-p {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-top: 20px;
+        }
+
+        &__right-p {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+    }
+
+    &-ecommerce {
+        height: 72px;
+        display: flex;
+        align-items: center;
+
+
+
+
+        &-p {
+            font-size: 16px;
+            font-weight: 600;
+            padding-left: 20px;
+
+        }
+    }
+
+    &-twitter {
+        color: @medium-dark-color;
+        font-size: 24px;
+    }
+
+}
+
+.section-block_filter {
+    background-color: #f5f6f7;
+}
+
+.section-block_about {
+    background-color: @khaki;
+}
