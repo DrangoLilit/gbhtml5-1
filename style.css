@@ -13,7 +13,7 @@ body {
 }
 h1 {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 3.8em;
   font-weight: 400;
 }
 h4 {
@@ -36,6 +36,47 @@ li {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
+}
+.mobile-menu {
+  display: none !important;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+.mobile_menu_full {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  /*background: @dark-color;
+    opacity: 0.8;*/
+  background: rgba(0, 0, 0, 0.9);
+}
+.mobile_menu_full-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.mobile_menu_full-nav {
+  height: inherit;
+  padding-top: 15px;
+}
+.mobile_menu_full-li {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px 0;
+  display: block;
+}
+.mobile_menu_full-cross {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  cursor: pointer;
 }
 .header {
   height: 100vh;
@@ -63,6 +104,7 @@ li {
 .header__menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 40px;
   width: 100%;
 }
@@ -96,7 +138,7 @@ li {
 .block_filter-label {
   color: #333333;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   padding-right: 35px;
   cursor: pointer;
@@ -124,6 +166,7 @@ li {
   text-transform: uppercase;
   line-height: 52px;
   text-align: center;
+  margin: 15px;
 }
 .btn:hover {
   background: #918363;
@@ -131,10 +174,12 @@ li {
 /* Блок товаров */
 .products {
   padding-top: 87px;
-  padding-bottom: 131px;
+  padding-bottom: 51px;
 }
 .products-cat {
   overflow: hidden;
+  padding-bottom: 50px;
+  padding-top: 25px;
 }
 .products-cat-h4 {
   color: #424242;
@@ -181,14 +226,19 @@ li {
 }
 .products-list-products {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 21px;
-  padding-bottom: 93px;
   clear: both;
+  /*            max-height: 410px;
+            overflow: hidden;*/
 }
 .products-list-product:hover {
   outline: 6px solid #aa9b77;
   outline-offset: -6px;
+}
+.products-list-product:last-child {
+  margin-right: 0;
 }
 .products-list-product {
   width: 320px;
@@ -200,6 +250,8 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 .products-list-product-top,
 .products-list-product-bottom {
@@ -265,12 +317,12 @@ li {
   justify-content: center;
   align-items: center;
 }
-.block_about .block_about-text {
+.block_about-text {
   width: 711px;
   height: 250px;
   border: 2px solid #918363;
 }
-.block_about .block_about-legend {
+.block_about-legend {
   color: #837659;
   font-size: 20px;
   font-weight: 600;
@@ -278,12 +330,13 @@ li {
   text-align: center;
   padding: 0 12px;
 }
-.block_about .block_about-p {
+.block_about-p {
   color: #424242;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   padding-top: 70px;
+  padding-bottom: 20px;
   width: 469px;
   margin: 0 auto;
   text-align: center;
@@ -332,7 +385,8 @@ li {
   background-color: #424242;
 }
 .footer-bottom-left {
-  width: 306px;
+  max-width: 306px;
+  margin-right: 20px;
 }
 .footer-bottom__left-p {
   font-size: 10px;
@@ -367,4 +421,85 @@ li {
 }
 .section-block_about {
   background-color: #aa9b77;
+}
+/* Планшет */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.3em;
+  }
+  .padding-sm {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .padding-bg {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .header__text {
+    width: 70%;
+  }
+  .header__text-p {
+    font-size: 16px;
+    padding: 0;
+  }
+  .header-arrow {
+    margin-bottom: 20px;
+  }
+  .block_filter {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    height: auto;
+  }
+  .products-list-product {
+    width: 220px;
+    height: 360px;
+    margin-right: 0;
+  }
+  .products-list-products {
+    justify-content: space-around;
+  }
+  .block_about .block_about-text {
+    width: 80%;
+  }
+  .block_about-p {
+    width: 80%;
+    padding-top: 50px;
+  }
+}
+/* Смартфон */
+@media screen and (max-width: 425px) {
+  .header__menu-ul {
+    display: none;
+  }
+  .mobile-menu {
+    display: block !important;
+  }
+  .padding-sm,
+  .padding-bg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .block_filter-label {
+    padding: 5px;
+    display: block;
+  }
+  .block_about-text {
+    height: auto;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+  .footer-bottom-left,
+  .footer-bottom-right {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__text-p {
+    display: none;
+  }
 }

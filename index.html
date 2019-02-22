@@ -8,9 +8,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script type="text/javascript">
+        function view(id) {
+            var el = document.getElementById(id);
+            if (el.style.display == "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }
+
+        function hiddenmenu(id) {
+            var el = document.getElementById(id);
+            if (el.style.display == "none") {
+                el.style.display = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
+
+    </script>
 </head>
 
 <body>
+    <div class="mobile_menu_full" id="mobile_menu_full">
+        <i class="fa fa-times mobile_menu_full-cross" aria-hidden="true" onclick="hiddenmenu('mobile_menu_full')"></i>
+        <nav class="mobile_menu_full-nav">
+            <ul class="mobile_menu_full-ul">
+                <li><a class="mobile_menu_full-li" href="">Home</a></li>
+                <li><a class="mobile_menu_full-li" href="">Products</a></li>
+                <li><a class="mobile_menu_full-li" href=""><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header-pic padding-sm">
         <div class="header wrapper">
             <div class="header__menu">
@@ -21,6 +51,7 @@
                         <li><a class="header__menu-li" href="">Products</a></li>
                         <li><a class="header__menu-li" href=""><i class="fas fa-shopping-cart"></i></a></li>
                     </ul>
+                    <i class="fa fa-bars mobile-menu" aria-hidden="true" onclick="view('mobile_menu_full')"></i>
                 </nav>
             </div>
             <div class="header__text">
@@ -52,6 +83,7 @@
                             <div>1&nbsp;/&nbsp;5</div>
                             <div><i class="fas fa-chevron-left products-list__pagination-arrow"></i>&nbsp;<i class="fas fa-chevron-right products-list__pagination-arrow"></i></div>
                         </div>
+                        <!-- Слайдер на js-->
                         <div class="products-list-products">
                             <div class="products-list-product" style="background-image: url(upload/p/Livello_2.png)">
                                 <div class="products-list-product-top">
