@@ -96,6 +96,7 @@ li {
   font-weight: 400;
   text-transform: uppercase;
   padding-right: 35px;
+  cursor: pointer;
 }
 .block_filter-input {
   /* Style for "Rettangolo" */
@@ -104,6 +105,8 @@ li {
   border-radius: 3px;
   border: 2px solid #aa9b77;
   margin-right: 18px;
+  vertical-align: middle;
+  cursor: pointer;
 }
 .btn {
   /* Style for "Rettangolo" */
@@ -171,6 +174,7 @@ li {
 }
 .products-list__pagination-arrow {
   padding-top: 4px;
+  cursor: pointer;
 }
 .products-list-products {
   display: flex;
@@ -213,12 +217,14 @@ li {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .products-list-product-name {
   color: #aa9b77;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  display: block;
 }
 .products-list-product-top,
 .products-list-product-bottom {
@@ -234,6 +240,7 @@ li {
   width: 21px;
   height: 21px;
   margin: 0 2px;
+  cursor: pointer;
 }
 .cat-women {
   text-align: right;
