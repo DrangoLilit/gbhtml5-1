@@ -167,6 +167,7 @@ li {
   line-height: 52px;
   text-align: center;
   margin: 15px;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background: #918363;
@@ -252,6 +253,7 @@ li {
   justify-content: space-between;
   margin-right: 10px;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 .products-list-product-top,
 .products-list-product-bottom {
@@ -321,14 +323,21 @@ li {
   width: 711px;
   height: 250px;
   border: 2px solid #918363;
+  position: relative;
 }
 .block_about-legend {
   color: #837659;
+  background: #aa9b77;
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 12px;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 150px;
+  display: block;
+  margin-left: -75px;
 }
 .block_about-p {
   color: #424242;
