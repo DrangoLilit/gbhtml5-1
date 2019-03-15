@@ -41,7 +41,7 @@
             </ul>
         </nav>
     </div>
-    <header class="header-pic padding-sm">
+    <header id="block-header" class="header-pic padding-sm">
         <div class="header wrapper">
             <div class="header__menu">
                 <a href="#"><img class="header-logo" src="img/logo.png" alt="Logo"></a>
@@ -63,7 +63,7 @@
     </header>
     <main>
         <section>
-            <div class="section-block_filter">
+            <div id="block-filter" class="section-block_filter">
                 <div class="block_filter wrapper padding-bg">
                     <div class="block_filter-options">
                         <label class="block_filter-label" for="men"><input type="checkbox" checked class="block_filter-input" id="men">Men</label>
@@ -74,10 +74,8 @@
                 </div>
             </div>
             <div class="products wrapper padding-bg">
-                <article class="products-cat cat-men">
-                    <span class="products-cat-title">
-                        <h4 class="products-cat-h4">men</h4>
-                    </span>
+                <article id="block-products1" class="products-cat cat-men">
+                    <h4 class="products-cat-title products-cat-h4">men</h4>
                     <div class="products-list">
                         <div class="products-list__pagination">
                             <div>1&nbsp;/&nbsp;5</div>
@@ -124,10 +122,8 @@
                         </div>
                     </div>
                 </article>
-                <article class="products-cat cat-women">
-                    <span class="products-cat-title">
-                        <h4 class="products-cat-h4">women</h4>
-                    </span>
+                <article id="block-products2" class="products-cat cat-women">
+                    <h4 class="products-cat-title products-cat-h4">women</h4>
                     <div class="products-list">
                         <div class="products-list__pagination cat-women-pagination">
                             <div>1&nbsp;/&nbsp;5</div>
@@ -174,7 +170,7 @@
                 </article>
             </div>
         </section>
-        <section class="section-block_about">
+        <section id="block-about" class="section-block_about">
             <div class="block_about wrapper">
                 <div class="block_about-text">
                     <h4 class="block_about-legend">about us</h4>
@@ -183,7 +179,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer id="block-footer" class="footer">
         <div class="footer-fst">
             <div class="footer-ecommerce wrapper padding-sm">
                 <i class="fab fa-twitter footer-twitter"></i>
@@ -210,6 +206,71 @@
             </div>
         </div>
     </footer>
+    <script>
+        var isScrolling = false;
+
+        window.addEventListener("scroll", throttleScroll, false);
+
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+
+        var header = document.querySelector("#block-header");
+        var filter = document.querySelector("#block-filter");
+        var products1 = document.querySelector("#block-products1");
+        var products2 = document.querySelector("#block-products2");
+        var about = document.querySelector("#block-about");
+        var footer = document.querySelector("#block-footer");
+
+        function scrolling(e) {
+            if (isPartiallyVisible(header)) {
+                header.classList.add("active");
+            }            
+            if (isPartiallyVisible(filter)) {
+                filter.classList.add("active");
+            }
+            if (isPartiallyVisible(products1)) {
+                products1.classList.add("active");
+            }
+            if (isPartiallyVisible(products2)) {
+                products2.classList.add("active");
+            }            
+            if (isPartiallyVisible(about)) {
+                about.classList.add("active");
+            }            
+            if (isPartiallyVisible(footer)) {
+                footer.classList.add("active");
+            }
+        }
+
+        function isPartiallyVisible(el) {
+            var elementBoundary = el.getBoundingClientRect();
+
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+
+            return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        }
+
+        function isFullyVisible(el) {
+            var elementBoundary = el.getBoundingClientRect();
+
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+
+    </script>
 </body>
 
 </html>
